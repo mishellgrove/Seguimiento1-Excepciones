@@ -16,6 +16,7 @@ public class Main {
 		sc = new Scanner(System.in);
 		boolean salir = false;
 		int tipoOperacion;
+		int contador = 0;
 
 		Minimarket mm = new Minimarket();
 
@@ -28,15 +29,13 @@ public class Main {
 			System.out.println("Escribe una de las opciones");
 			tipoOperacion = sc.nextInt();
 
-			int contador = 0;
-
-
-
+			
 			switch (tipoOperacion) {
 			case 1:
 				if (tipoOperacion == 1){
 					int menu = 0;
 					contador++;
+					
 					String ty;
 					int id;
 					System.out.println("Digite el tipo de documento en mayuscula");
