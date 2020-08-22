@@ -2,13 +2,27 @@ package model;
 
 public class Person {
 	
-	public final static int TI = 1;
-	public final static int CC = 7;
-	public final static int PP = 7;
-	public final static int CE = 7;
+	public static final String TARJETA_IDENTIDAD = "TI";
+	public static final String CEDULA_CIUDADANIA = "CC";
+	public static final String PASAPORTE = "PP";
+	public static final String CEDULA_EXTRANJERIA = "CE";
 	private String type;
 	private int identification;
 	
-
-
+	
+	public Person(){
+	}
+	
+	public Person(String type, int identification){
+		this.type = type;
+		this.identification = identification;
+	}
+	
+	public String getType(){
+		return this.type;
+	}
+	
+	public int getIdentification(){
+		return this.identification;
+	}
 }
