@@ -4,6 +4,8 @@ import exceptions.IdNoMatchException;
 import model.Minimarket;
 public class Main {
 
+
+
 	private static Scanner sc;
 
 	/**
@@ -12,18 +14,29 @@ public class Main {
 	 */
 	public static void main(String[] args) throws IdNoMatchException {
 		sc = new Scanner(System.in);
+		boolean salir = false;
 		int tipoOperacion;
-		
+
 		Minimarket mm = new Minimarket();
-		
-		System.out.println("Bienvenido! ¡Qué desea realizar?");
-		System.out.print("1.Ingresar usuario\n2.consultar numero de personas que han intentado ingresar\n3.Salir\n");
-		tipoOperacion = sc.nextInt();
-		int contador = 0;
-		
-				switch (tipoOperacion) {
-				case 1:
-					
+
+		while(!salir){
+			System.out.println("Bienvenido! Qué desea realizar?");
+			System.out.println("1. Ingresar usuario");
+			System.out.println("2. consultar numero de personas que han intentado ingresar");
+			System.out.println("3. Salir");
+
+			System.out.println("Escribe una de las opciones");
+			tipoOperacion = sc.nextInt();
+
+			int contador = 0;
+
+
+
+			switch (tipoOperacion) {
+			case 1:
+				if (tipoOperacion == 1){
+					int menu = 0;
+					contador++;
 					String ty;
 					int id;
 					System.out.println("Digite el tipo de documento en mayuscula");
@@ -31,22 +44,27 @@ public class Main {
 					System.out.println("Digite el numero de documento");
 					id = sc.nextInt();
 					mm.addPerson(ty,id);
-					contador++;
-					System.out.println("¿desea agregar mas?, 1= si, 2= no");
-					tipoOperacion = sc.nextInt();
-					break;
-				case 2:
-					System.out.println(contador);
-					break;
-				case 3:
-					System.exit(3);
-					break;
-				default:
-					System.out.println("El operador es incorrecto");
 					break;
 				}
 
+			case 2:
+				System.out.println(contador);
+				break;
+			case 3:
+				System.exit(3);
+				break;
+			default:
+				System.out.println("Solo numeros entre el 1 y 3");
+				break;
 			}
 
+
+
 		}
+	}
+}
+
+
+
+
 
