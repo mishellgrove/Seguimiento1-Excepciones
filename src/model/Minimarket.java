@@ -6,11 +6,11 @@ import exceptions.IdNoMatchException;
 
 public class Minimarket {
 	
-	private Person income;
+	
 	private ArrayList<Person> people;
 	
 	public Minimarket(){
-		people = new ArrayList();
+		people = new ArrayList<Person>();
 	}
 
 	public void addPerson(String type, int identification) throws IdNoMatchException {

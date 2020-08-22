@@ -35,8 +35,10 @@ public class MinimarketTest {
 			myMiniMarket.addPerson(type, identification);
 		} catch (IdNoMatchException idn){
 			idn.printStackTrace();
+			fail ("no es posible agregarse, es menor de edad");
 		}
 		assertEquals(0, myMiniMarket.getPeople().size());
+		
 	}
 	
 	@Test
